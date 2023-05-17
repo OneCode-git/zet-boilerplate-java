@@ -2,7 +2,7 @@
 A boilerplate repo to quickstart development of a microservice in java
 
 
-## Todo
+## TODOs
  - Script to easily rename and refactor the project name 
  - Logging boilerplate and demo
  - Liquidbase boilerplate and demo test db

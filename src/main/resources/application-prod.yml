@@ -1,0 +1,54 @@
+spring:
+  config:
+    import: ${SECRETMANAGER_CONFIG:aws-secretsmanager:/production/boilerplate}
+
+  datasource:
+    url: jdbc:mysql://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}?useUnicode=yes&characterEncoding=UTF-8&enabledTLSProtocols=TLSv1.2&allowMultiQueries=true
+    name: ${RDS_DB_NAME}
+    username: ${RDS_USERNAME}
+    password: ${RDS_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: ${con-timeout:60000}
+      minimum-idle: ${min-pool-size:10}
+      maximum-pool-size: ${max-pool-size:100}
+      idle-timeout: ${idle-timeout:600000}
+      max-lifetime: ${max-lifetime:1800000}
+      auto-commit: true
+      leakDetectionThreshold: ${hikari-leak-detection-threshold:5000}
+    dbcp2:
+      max-wait-millis: 30000
+      validation-query: SELECT 1
+      validation-query-timeout: 30
+
+server:
+  port: ${PORT:8080}
+  tomcat:
+    mbeanregistry:
+      enabled: true
+
+aws_sns_access_key: ${AWS_SNS_ACCESS_KEY}
+aws_sns_secret_key: ${AWS_SNS_SECRET_KEY}
+aws_sns_topic_arn: ${SNS_TOPIC_SIGNUP}
+aws_sns_event_arn: ${SNS_EVENT_SIGNUP}
+
+amazon:
+  accessKey: ${AWS_ACCESS_KEY}
+  secretKey: ${AWS_SECRET_KEY}
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics
+
+springdoc:
+  swagger-ui:
+    enabled: true
+  api-docs:
+    enabled: true
+  pathsToMatch: /**

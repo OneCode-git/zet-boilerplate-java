@@ -8,11 +8,11 @@
 		<version>2.7.11</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.zetapp</groupId>
-	<artifactId>boilerplate</artifactId>
+	<groupId>com.onecode</groupId>
+	<artifactId>integration-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>boilerplate</name>
-	<description>Boilerplate for microservices in ZET</description>
+	<name>integration-service</name>
+	<description>Microservice for third party integrations</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>

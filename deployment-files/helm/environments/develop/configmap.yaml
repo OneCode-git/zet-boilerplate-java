@@ -1,0 +1,5 @@
+  #This is QA Config file
+  ACTIVE_PROFILE: dev
+  #SECRETMANAGER_CONFIG: "aws-secretsmanager:/develop/experiment"
+  AWS_REGION: ap-south-1
+  _JAVA_OPTIONS: -javaagent:/var/newrelic.jar -Dnewrelic.config.app_name=experiment-develop-eks -Dnewrelic.config.license_key=7e496d7961ed578c800942b3fd949672fd3dNRAL -Xms256m

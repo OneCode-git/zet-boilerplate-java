@@ -1,0 +1,6 @@
+  #This is QA Config file
+  ACTIVE_PROFILE: staging
+  SECRETMANAGER_CONFIG: "aws-secretsmanager:/staging/integration"
+  AWS_REGION: ap-south-1
+  PORT: "8080"
+  _JAVA_OPTIONS: -javaagent:/var/newrelic.jar -Dnewrelic.config.app_name=integration-staging-eks -Dnewrelic.config.license_key=7e496d7961ed578c800942b3fd949672fd3dNRAL -Xms256m

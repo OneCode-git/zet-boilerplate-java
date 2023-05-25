@@ -22,7 +22,7 @@ spring:
       validation-query-timeout: 30
 
 server:
-  port: ${PORT:8080}
+  port: ${PORT:8084}
   tomcat:
     mbeanregistry:
       enabled: true

@@ -1,4 +1,4 @@
-package com.zetapp.boilerplate.config;
+package com.onecode.integrationservice.config;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;

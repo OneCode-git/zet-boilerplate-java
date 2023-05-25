@@ -1,4 +1,4 @@
-package com.zetapp.boilerplate;
+package com.onecode.integrationservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

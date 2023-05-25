@@ -1,4 +1,4 @@
-package com.zetapp.boilerplate;
+package com.onecode.integrationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

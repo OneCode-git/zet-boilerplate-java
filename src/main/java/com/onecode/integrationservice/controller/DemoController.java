@@ -1,4 +1,4 @@
-package com.zetapp.boilerplate.controller;
+package com.onecode.integrationservice.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

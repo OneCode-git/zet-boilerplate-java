@@ -1,21 +1,21 @@
 global:
   env: staging
   ingressclass: staging
-appName: experiment
+appName: integration
 namespace: staging
 
 minReplicas: 1
 maxReplicas: 10
 
 serviceport: 80
-targetport: 8080
+targetport: 8084
 
 hosts: "*.staging.onecode.in"
-dnsname: experiment-eks.staging.onecode.in
+dnsname: integration-eks.staging.onecode.in
 
 subnet: subnet-2568bb5e,subnet-c6bbe0ae,subnet-ae8e06e2
 LBname: staging-eks-lbingress
 
 image:
-  name: 887417737466.dkr.ecr.ap-south-1.amazonaws.com/experiment-staging
+  name: 887417737466.dkr.ecr.ap-south-1.amazonaws.com/integration-staging
   tag: latest

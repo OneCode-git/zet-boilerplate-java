@@ -1,21 +1,21 @@
 global:
   env: preprod
   ingressclass: production
-appName: experiment
+appName: integration
 namespace: preprod
 
 minReplicas: 1
 maxReplicas: 10
 
 serviceport: 80
-targetport: 8080
+targetport: 8084
 
 hosts: "*.preprod.zetapp.in"
-dnsname: experiment.preprod.zetapp.in
+dnsname: integration.preprod.zetapp.in
 
 subnet: subnet-06a741cebaf0f7819,subnet-06e90286ced3c92b3,subnet-026043a113ecb3b3a
 LBname: preprod-eks-lbingress
 
 image:
-  name: 887417737466.dkr.ecr.ap-south-1.amazonaws.com/experiment-preprod
+  name: 887417737466.dkr.ecr.ap-south-1.amazonaws.com/integration-preprod
   tag: latest

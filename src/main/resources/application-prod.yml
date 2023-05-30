@@ -21,6 +21,12 @@ spring:
       validation-query: SELECT 1
       validation-query-timeout: 30
 
+  liquibase:
+    change-log: classpath:/db/liquibase/db.changelog-master.yaml
+    url: jdbc:mysql://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}?useUnicode=yes&characterEncoding=UTF-8&enabledTLSProtocols=TLSv1.2&allowMultiQueries=true&useLocalSessionState=true
+    user: ${LIQUIBASE_USERNAME}
+    password: ${LIQUIBASE_PASSWORD}
+
 server:
   port: ${PORT:8080}
   tomcat:

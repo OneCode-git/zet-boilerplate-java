@@ -28,10 +28,15 @@ spring:
     password: ${LIQUIBASE_PASSWORD}
 
 server:
-  port: ${PORT}
+  port: ${PORT:8080}
   tomcat:
     mbeanregistry:
       enabled: true
+
+aws_sns_access_key: ${AWS_SNS_ACCESS_KEY}
+aws_sns_secret_key: ${AWS_SNS_SECRET_KEY}
+aws_sns_topic_arn: ${SNS_TOPIC_SIGNUP}
+aws_sns_event_arn: ${SNS_EVENT_SIGNUP}
 
 amazon:
   accessKey: ${AWS_ACCESS_KEY}

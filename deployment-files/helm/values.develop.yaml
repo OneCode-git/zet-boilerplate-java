@@ -1,0 +1,21 @@
+global:
+  env: develop
+  ingressclass: staging
+appName: boilerplate
+namespace: develop
+
+minReplicas: 1
+maxReplicas: 10
+
+serviceport: 80
+targetport: 8080
+
+hosts: "*.dev.onecode.in"
+dnsname: boilerplate.dev.onecode.in
+
+subnet: subnet-2568bb5e,subnet-c6bbe0ae,subnet-ae8e06e2
+LBname: develop-eks-lbingress
+
+image:
+  name: 887417737466.dkr.ecr.ap-south-1.amazonaws.com/boilerplate-develop
+  tag: latest

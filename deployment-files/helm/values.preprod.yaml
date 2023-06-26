@@ -5,7 +5,7 @@ appName: integration
 namespace: preprod
 
 minReplicas: 1
-maxReplicas: 10
+maxReplicas: 5
 
 serviceport: 80
 targetport: 8080
